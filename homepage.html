@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coinflip Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="casino.ico" type="image/x-icon">
+  <link rel="icon" href="casino.ico" type="image/x-icon">
+  <style>
+    .coinflip-animation {
+      width: 100px;
+      height: 100px;
+      background-color: #159c4e;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+    }
+    .coinflip-animation::before {
+      content: attr(data-outcome);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .spinning {
+      animation: spin 0.75s linear infinite;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(1turn);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mr. Grøn</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/homepage.html">Homepage</a></li>
+        <li><a href="/coinflip.html">Coinflip</a></li>
+        <li><a href="/crash.html">Crash</a></li>
+      </ul>
+    </nav>
+  </header>
